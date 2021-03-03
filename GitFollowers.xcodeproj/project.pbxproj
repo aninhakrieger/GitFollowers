@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E87AEC0A25F019830019B332 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC0925F019830019B332 /* GFTextField.swift */; };
+		E87AEC0E25F029020019B332 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC0D25F029020019B332 /* KeyboardExtension.swift */; };
+		E87AEC1525F036120019B332 /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC1425F036120019B332 /* FollowersListVC.swift */; };
 		E8BE39A425EFEA8C0066A835 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE39A325EFEA8C0066A835 /* GFButton.swift */; };
 		E8DD460925EEE4C700884392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD460825EEE4C700884392 /* AppDelegate.swift */; };
 		E8DD460B25EEE4C700884392 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD460A25EEE4C700884392 /* SceneDelegate.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		E87AEC0925F019830019B332 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		E87AEC0D25F029020019B332 /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
+		E87AEC1425F036120019B332 /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		E8BE39A325EFEA8C0066A835 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		E8DD460525EEE4C700884392 /* GitFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DD460825EEE4C700884392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E87AEC0C25F028D90019B332 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				E87AEC0D25F029020019B332 /* KeyboardExtension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		E8BE39A225EFE86E0066A835 /* support-files */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +91,7 @@
 		E8DD460725EEE4C700884392 /* GitFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				E87AEC0C25F028D90019B332 /* extension */,
 				E8BE39A725EFEA930066A835 /* custom */,
 				E8BE39A225EFE86E0066A835 /* support-files */,
 				E8DD462425EEEB1F00884392 /* view-controller */,
@@ -93,6 +106,7 @@
 			children = (
 				E8DD462125EEEB1A00884392 /* SearchVC.swift */,
 				E8DD460C25EEE4C700884392 /* FavoritesVC.swift */,
+				E87AEC1425F036120019B332 /* FollowersListVC.swift */,
 			);
 			path = "view-controller";
 			sourceTree = "<group>";
@@ -167,6 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E87AEC0A25F019830019B332 /* GFTextField.swift in Sources */,
+				E87AEC0E25F029020019B332 /* KeyboardExtension.swift in Sources */,
+				E87AEC1525F036120019B332 /* FollowersListVC.swift in Sources */,
 				E8DD462225EEEB1A00884392 /* SearchVC.swift in Sources */,
 				E8BE39A425EFEA8C0066A835 /* GFButton.swift in Sources */,
 				E8DD460D25EEE4C700884392 /* FavoritesVC.swift in Sources */,

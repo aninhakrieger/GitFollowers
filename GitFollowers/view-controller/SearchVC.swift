@@ -16,6 +16,7 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        hideKeyboardWhenTappedAround()
         configLogoImageView()
         configureTextField()
         configurebtnUser()
@@ -42,6 +43,7 @@ class SearchVC: UIViewController {
     
     func configureTextField(){
         view.addSubview(textFieldUser)
+        textFieldUser.delegate = self
         
         NSLayoutConstraint.activate([
             textFieldUser.topAnchor.constraint(equalTo: imageLogo.bottomAnchor, constant: 48),
@@ -53,6 +55,7 @@ class SearchVC: UIViewController {
     
     func configurebtnUser(){
         view.addSubview(btnUser)
+        btnUser.addTarget(self, action: #selector(pushFollerwersVC), for: UIControl.Event.touchUpInside)
         
         NSLayoutConstraint.activate([
             btnUser.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -62,8 +65,23 @@ class SearchVC: UIViewController {
         ])
     }
     
-    
-    
+    @objc func pushFollerwersVC(){
+        let followersListVC = FollowersListVC()
+        followersListVC.userName = textFieldUser.text
+        followersListVC.title = textFieldUser.text
+        self.navigationController?.pushViewController(followersListVC, animated: true)
+    }
 
+}
 
+extension SearchVC: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pushFollerwersVC()
+        return true
+    }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        textFieldUser.text = ""
+    }
 }
