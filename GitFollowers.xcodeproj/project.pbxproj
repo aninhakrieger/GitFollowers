@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E87AEC0A25F019830019B332 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC0925F019830019B332 /* GFTextField.swift */; };
+		E8BE39A425EFEA8C0066A835 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE39A325EFEA8C0066A835 /* GFButton.swift */; };
 		E8DD460925EEE4C700884392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD460825EEE4C700884392 /* AppDelegate.swift */; };
 		E8DD460B25EEE4C700884392 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD460A25EEE4C700884392 /* SceneDelegate.swift */; };
 		E8DD460D25EEE4C700884392 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD460C25EEE4C700884392 /* FavoritesVC.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E87AEC0925F019830019B332 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		E8BE39A325EFEA8C0066A835 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		E8DD460525EEE4C700884392 /* GitFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DD460825EEE4C700884392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8DD460A25EEE4C700884392 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8BE39A225EFE86E0066A835 /* support-files */ = {
+			isa = PBXGroup;
+			children = (
+				E8DD461325EEE4CA00884392 /* LaunchScreen.storyboard */,
+				E8DD461625EEE4CA00884392 /* Info.plist */,
+				E8DD461125EEE4CA00884392 /* Assets.xcassets */,
+			);
+			path = "support-files";
+			sourceTree = "<group>";
+		};
+		E8BE39A725EFEA930066A835 /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				E8BE39A325EFEA8C0066A835 /* GFButton.swift */,
+				E87AEC0925F019830019B332 /* GFTextField.swift */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
 		E8DD45FC25EEE4C700884392 = {
 			isa = PBXGroup;
 			children = (
@@ -56,23 +79,22 @@
 		E8DD460725EEE4C700884392 /* GitFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				E8DD462425EEEB1F00884392 /* controller */,
+				E8BE39A725EFEA930066A835 /* custom */,
+				E8BE39A225EFE86E0066A835 /* support-files */,
+				E8DD462425EEEB1F00884392 /* view-controller */,
 				E8DD460825EEE4C700884392 /* AppDelegate.swift */,
 				E8DD460A25EEE4C700884392 /* SceneDelegate.swift */,
-				E8DD461125EEE4CA00884392 /* Assets.xcassets */,
-				E8DD461325EEE4CA00884392 /* LaunchScreen.storyboard */,
-				E8DD461625EEE4CA00884392 /* Info.plist */,
 			);
 			path = GitFollowers;
 			sourceTree = "<group>";
 		};
-		E8DD462425EEEB1F00884392 /* controller */ = {
+		E8DD462425EEEB1F00884392 /* view-controller */ = {
 			isa = PBXGroup;
 			children = (
-				E8DD460C25EEE4C700884392 /* FavoritesVC.swift */,
 				E8DD462125EEEB1A00884392 /* SearchVC.swift */,
+				E8DD460C25EEE4C700884392 /* FavoritesVC.swift */,
 			);
-			path = controller;
+			path = "view-controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E87AEC0A25F019830019B332 /* GFTextField.swift in Sources */,
 				E8DD462225EEEB1A00884392 /* SearchVC.swift in Sources */,
+				E8BE39A425EFEA8C0066A835 /* GFButton.swift in Sources */,
 				E8DD460D25EEE4C700884392 /* FavoritesVC.swift in Sources */,
 				E8DD460925EEE4C700884392 /* AppDelegate.swift in Sources */,
 				E8DD460B25EEE4C700884392 /* SceneDelegate.swift in Sources */,
@@ -287,13 +311,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2MN26CJV9;
-				INFOPLIST_FILE = GitFollowers/Info.plist;
+				DEVELOPMENT_TEAM = GY2RAXB98B;
+				INFOPLIST_FILE = "GitFollowers/support-files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.anakrieger.GitFollowers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anakriegers.GitFollowers1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -306,13 +331,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2MN26CJV9;
-				INFOPLIST_FILE = GitFollowers/Info.plist;
+				DEVELOPMENT_TEAM = GY2RAXB98B;
+				INFOPLIST_FILE = "GitFollowers/support-files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.anakrieger.GitFollowers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anakriegers.GitFollowers1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
