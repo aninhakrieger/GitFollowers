@@ -21,16 +21,15 @@ class FollowersListVC: UIViewController {
             return
         }
         
-        NetworkManager.shared.getFollowers(for: userName, page: 1) { (followers, erroMessage) in
-            guard let followers = followers else{
-                self.presentAlertOnMainThread(title: "Bad Stuff Happend", message: (erroMessage?.rawValue)!, buttonTitle: "OK")
-                return
+        NetworkManager.shared.getFollowers(for: userName, page: 1) { result in
+            switch result{
+            case .success(let followers):
+                print("Followers.count = \(followers.count)")
+                print(followers)
+            case .failure(let error):
+                self.presentAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "OK")
             }
-            
-            print("Followers.count = \(followers.count)")
-            print(followers)
         }
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
