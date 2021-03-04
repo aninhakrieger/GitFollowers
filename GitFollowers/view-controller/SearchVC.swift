@@ -15,7 +15,8 @@ class SearchVC: UIViewController {
     
     var isUsernameEntered: Bool {
         print(textFieldUser.text!.isEmpty)
-        return !textFieldUser.text!.isEmpty}
+        return !textFieldUser.text!.isEmpty
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,15 +71,14 @@ class SearchVC: UIViewController {
     }
     
     @objc func pushFollerwersVC(){
-        guard isUsernameEntered else{
-            
+        guard isUsernameEntered , let userName = textFieldUser.text?.trimmingCharacters(in: .whitespaces) else{
             presentAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for.", buttonTitle: "OK")
             return
         }
         
         let followersListVC = FollowersListVC()
-        followersListVC.userName = textFieldUser.text
-        followersListVC.title = textFieldUser.text
+        followersListVC.userName = userName
+        followersListVC.title = userName
         self.navigationController?.pushViewController(followersListVC, animated: true)
     }
 

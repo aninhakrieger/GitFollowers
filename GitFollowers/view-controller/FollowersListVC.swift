@@ -16,6 +16,20 @@ class FollowersListVC: UIViewController {
         view.backgroundColor = .systemBackground
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        guard let userName = userName else{
+            return
+        }
+        
+        NetworkManager.shared.getFollowers(for: userName, page: 1) { (followers, erroMessage) in
+            guard let followers = followers else{
+                self.presentAlertOnMainThread(title: "Bad Stuff Happend", message: erroMessage!, buttonTitle: "OK")
+                return
+            }
+            
+            print("Followers.count = \(followers.count)")
+            print(followers)
+        }
 
     }
     

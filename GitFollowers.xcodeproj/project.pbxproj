@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E854F26E25F153ED0026AD01 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854F26D25F153ED0026AD01 /* Follower.swift */; };
 		E854F27125F154AC0026AD01 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854F27025F154AC0026AD01 /* User.swift */; };
+		E854F27525F1588D0026AD01 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854F27425F1588D0026AD01 /* NetworkManager.swift */; };
 		E87AEC0A25F019830019B332 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC0925F019830019B332 /* GFTextField.swift */; };
 		E87AEC0E25F029020019B332 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC0D25F029020019B332 /* KeyboardExtension.swift */; };
 		E87AEC1525F036120019B332 /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC1425F036120019B332 /* FollowersListVC.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		E854F26D25F153ED0026AD01 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		E854F27025F154AC0026AD01 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E854F27425F1588D0026AD01 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E87AEC0925F019830019B332 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		E87AEC0D25F029020019B332 /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		E87AEC1425F036120019B332 /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 				E854F27025F154AC0026AD01 /* User.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E854F27325F1586F0026AD01 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				E854F27425F1588D0026AD01 /* NetworkManager.swift */,
+			);
+			path = manager;
 			sourceTree = "<group>";
 		};
 		E87AEC0C25F028D90019B332 /* extension */ = {
@@ -118,6 +128,7 @@
 		E8DD460725EEE4C700884392 /* GitFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				E854F27325F1586F0026AD01 /* manager */,
 				E854F26B25F1526F0026AD01 /* model */,
 				E87AEC0C25F028D90019B332 /* extension */,
 				E8BE39A725EFEA930066A835 /* custom */,
@@ -213,6 +224,7 @@
 				E854F26E25F153ED0026AD01 /* Follower.swift in Sources */,
 				E87AEC0A25F019830019B332 /* GFTextField.swift in Sources */,
 				E87AEC0E25F029020019B332 /* KeyboardExtension.swift in Sources */,
+				E854F27525F1588D0026AD01 /* NetworkManager.swift in Sources */,
 				E87AEC1825F043240019B332 /* GFContainerView.swift in Sources */,
 				E87AEC1E25F044A10019B332 /* GFTitleLabel.swift in Sources */,
 				E87AEC1525F036120019B332 /* FollowersListVC.swift in Sources */,
