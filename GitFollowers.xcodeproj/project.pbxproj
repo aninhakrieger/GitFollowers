@@ -55,6 +55,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E854F26B25F1526F0026AD01 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		E87AEC0C25F028D90019B332 /* extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +112,7 @@
 		E8DD460725EEE4C700884392 /* GitFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				E854F26B25F1526F0026AD01 /* model */,
 				E87AEC0C25F028D90019B332 /* extension */,
 				E8BE39A725EFEA930066A835 /* custom */,
 				E8BE39A225EFE86E0066A835 /* support-files */,
