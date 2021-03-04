@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E854F26E25F153ED0026AD01 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854F26D25F153ED0026AD01 /* Follower.swift */; };
+		E854F27125F154AC0026AD01 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854F27025F154AC0026AD01 /* User.swift */; };
 		E87AEC0A25F019830019B332 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC0925F019830019B332 /* GFTextField.swift */; };
 		E87AEC0E25F029020019B332 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC0D25F029020019B332 /* KeyboardExtension.swift */; };
 		E87AEC1525F036120019B332 /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87AEC1425F036120019B332 /* FollowersListVC.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E854F26D25F153ED0026AD01 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		E854F27025F154AC0026AD01 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E87AEC0925F019830019B332 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		E87AEC0D25F029020019B332 /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		E87AEC1425F036120019B332 /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		E854F26B25F1526F0026AD01 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				E854F26D25F153ED0026AD01 /* Follower.swift */,
+				E854F27025F154AC0026AD01 /* User.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -204,12 +210,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E87AEC2425F04D220019B332 /* ViewControllerExtension.swift in Sources */,
+				E854F26E25F153ED0026AD01 /* Follower.swift in Sources */,
 				E87AEC0A25F019830019B332 /* GFTextField.swift in Sources */,
 				E87AEC0E25F029020019B332 /* KeyboardExtension.swift in Sources */,
 				E87AEC1825F043240019B332 /* GFContainerView.swift in Sources */,
 				E87AEC1E25F044A10019B332 /* GFTitleLabel.swift in Sources */,
 				E87AEC1525F036120019B332 /* FollowersListVC.swift in Sources */,
 				E87AEC1B25F044630019B332 /* GFAlertVC.swift in Sources */,
+				E854F27125F154AC0026AD01 /* User.swift in Sources */,
 				E8DD462225EEEB1A00884392 /* SearchVC.swift in Sources */,
 				E87AEC2125F045960019B332 /* GFBodyLabel.swift in Sources */,
 				E8BE39A425EFEA8C0066A835 /* GFButton.swift in Sources */,

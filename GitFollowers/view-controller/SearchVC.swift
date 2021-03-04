@@ -13,7 +13,9 @@ class SearchVC: UIViewController {
     let textFieldUser = GFTextField()
     let btnUser = GFButton(backgroundColor: .systemPurple, title: "Get Followers")
     
-    var isUsernameEntered: Bool {return !textFieldUser.text!.isEmpty}
+    var isUsernameEntered: Bool {
+        print(textFieldUser.text!.isEmpty)
+        return !textFieldUser.text!.isEmpty}
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +73,6 @@ class SearchVC: UIViewController {
         guard isUsernameEntered else{
             
             presentAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for.", buttonTitle: "OK")
-            print("No username")
             return
         }
         
