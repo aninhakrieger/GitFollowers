@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFAvatarImageCell: UICollectionViewCell {
+class FollowerCell: UICollectionViewCell {
     
     static let identifier = "GFAvatarImageCell"
     let avatarImage = GFAvatarImage(frame: .zero)
@@ -22,6 +22,10 @@ class GFAvatarImageCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func set(follower: Follower){
+        avavatLabel.text = follower.login
+    }
+    
     private func configure(){
         addSubview(avatarImage)
         addSubview(avavatLabel)
@@ -34,7 +38,7 @@ class GFAvatarImageCell: UICollectionViewCell {
             avatarImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             avatarImage.heightAnchor.constraint(equalTo: avatarImage.widthAnchor),
             
-            avavatLabel.topAnchor.constraint(equalTo: avatarImage.topAnchor, constant: 12),
+            avavatLabel.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 12),
             avavatLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             avavatLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: padding)
             
