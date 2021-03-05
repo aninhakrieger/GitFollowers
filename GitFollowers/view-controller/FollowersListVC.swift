@@ -10,13 +10,33 @@ import UIKit
 class FollowersListVC: UIViewController {
     
     var userName:String?
+    var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViewController()
+        getFollowers()
+        configureColletionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    func configureColletionView(){
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
+        view.addSubview(collectionView)
+        collectionView.register(GFAvatarImageCell.self, forCellWithReuseIdentifier: GFAvatarImageCell.identifier)
+        collectionView.backgroundColor = .systemPink
+    }
+    
+    func configureViewController(){
         view.backgroundColor = .systemBackground
-        
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+    }
+    
+    func getFollowers(){
         guard let userName = userName else{
             return
         }
@@ -30,11 +50,6 @@ class FollowersListVC: UIViewController {
                 self.presentAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "OK")
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
 

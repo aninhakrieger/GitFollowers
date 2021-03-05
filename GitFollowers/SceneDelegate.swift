@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = createTabbar()
         window?.makeKeyAndVisible()
+        
+        configureNavigationBar()
     }
     
     func createNavigationController(viewController: UIViewController, title:String, iconImage: UITabBarItem.SystemItem, tag: Int) -> UINavigationController{
