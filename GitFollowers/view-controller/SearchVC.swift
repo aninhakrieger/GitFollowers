@@ -14,7 +14,6 @@ class SearchVC: UIViewController {
     let btnUser = GFButton(backgroundColor: .systemPurple, title: "Get Followers")
     
     var isUsernameEntered: Bool {
-        print(textFieldUser.text!.isEmpty)
         return !textFieldUser.text!.isEmpty
     }
 

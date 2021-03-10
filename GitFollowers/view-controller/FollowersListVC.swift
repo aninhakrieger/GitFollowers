@@ -11,16 +11,18 @@ class FollowersListVC: UIViewController {
     
     enum Section{ case main }
     
-    var userName:String?
+    var userName:String!
     var collectionView: UICollectionView!
     var dataSouce: UICollectionViewDiffableDataSource<Section, Follower>!
     var followers: [Follower] = []
     
+    var page = 1
+    var hasMoreFollowers = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
-        getFollowers()
+        getFollowers(username: userName, page: page)
         configureColletionView()
         configureDataSource()
     }
@@ -33,6 +35,7 @@ class FollowersListVC: UIViewController {
     func configureColletionView(){
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
         view.addSubview(collectionView)
+        collectionView.delegate = self
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.identifier)
         collectionView.backgroundColor = .systemBackground
     }
@@ -42,17 +45,15 @@ class FollowersListVC: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    func getFollowers(){
-        guard let userName = userName else{
-            return
-        }
+    func getFollowers(username: String,page:Int){
         
-        NetworkManager.shared.getFollowers(for: userName, page: 1) {[weak self] result in
+        NetworkManager.shared.getFollowers(for: userName, page: page) {[weak self] result in
             guard let self = self else { return }
             
             switch result{
             case .success(let followers):
-                self.followers = followers
+                if followers.count < 100 { self.hasMoreFollowers = false }
+                self.followers.append(contentsOf: followers)
                 self.updateData()
             case .failure(let error):
                 self.presentAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "OK")
@@ -77,3 +78,18 @@ class FollowersListVC: UIViewController {
 
 
 }
+
+extension FollowersListVC: UICollectionViewDelegate{
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height{
+            guard hasMoreFollowers else { return }
+            page+=1
+            getFollowers(username: userName, page: page)
+        }
+    }
+}
+
