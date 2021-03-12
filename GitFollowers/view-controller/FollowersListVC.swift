@@ -22,8 +22,8 @@ class FollowersListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
-        getFollowers(username: userName, page: page)
         configureColletionView()
+        getFollowers(username: userName, page: page)
         configureDataSource()
     }
     
@@ -46,10 +46,10 @@ class FollowersListVC: UIViewController {
     }
     
     func getFollowers(username: String,page:Int){
-        
+        showLoadingView()
         NetworkManager.shared.getFollowers(for: userName, page: page) {[weak self] result in
             guard let self = self else { return }
-            
+            self.dismissLoadingView()
             switch result{
             case .success(let followers):
                 if followers.count < 100 { self.hasMoreFollowers = false }
@@ -85,7 +85,7 @@ extension FollowersListVC: UICollectionViewDelegate{
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
         
-        if offsetY > contentHeight - height{
+        if offsetY > contentHeight - height {
             guard hasMoreFollowers else { return }
             page+=1
             getFollowers(username: userName, page: page)
